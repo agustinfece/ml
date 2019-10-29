@@ -1949,6 +1949,7 @@ input, select, textarea {
 			letter-spacing: 0.05em;
 			display: inline-block;
 			vertical-align: middle;
+			letter-spacing: -0.01em;
 		}
 
 		#logo span {
