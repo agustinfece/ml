@@ -2691,3 +2691,8 @@ input, select, textarea {
 .desc {
 	text-align: justify;
 }
+
+.imgC {
+	max-width: 100%;
+	height: auto;
+}
