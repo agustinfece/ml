@@ -2696,3 +2696,7 @@ input, select, textarea {
 	max-width: 100%;
 	height: auto;
 }
+
+.italic{
+	font-style: italic;
+}
