@@ -66,26 +66,26 @@
 						<div class="container">
 							<div class="row gtr-200">
 								<div class="col-4 col-12-medium">
-									<div id="sidebar">
-	
+									<div id="sidebar">	
 										<!-- Sidebar -->
-											<section><br><br>
-												<h2 id="AIDuet">AI Duet</h2>
-												<p class="desc italic">
-													"This experiment lets you play a duet with the computer. Just play some notes, and the computer will respond to your melody. You don’t even have to know how to play piano it’s fun to just press some keys and listen to what comes back. You can click the keyboard, use your computer keys, or even plug in a MIDI keyboard. It's just one example of how machine learning can inspire people to be creative in new ways."
-												</p>	
-												<a href="https://experiments.withgoogle.com/ai/ai-duet/view/" class="button icon solid fa-info-circle">Have fun</a>
-											</section>
-	
+												<article>
+												<img class="imgC" src="./images/mush1.gif"><img class="imgC" src="./images/mush3.gif">
+												
+											</article>		
 									</div>
 								</div>
 								<div class="col-8 col-12-medium imp-medium">
 									<div id="content">
-										<!-- Content -->
-											<article>
-												<img class="imgC" src="./images/ai_duet.gif">
-												<!--<img class="imgC" src="./images/quickDraw6.gif">-->
-											</article>
+										<!-- Content --><section>
+												<h2 id="">Context</h2>
+												It is a <a href="delving.html#Supervised">classification</a> problem that is about predicting if a mushroom is edible or not. For this, <a href="https://archive.ics.uci.edu/ml/datasets/Mushroom">UCI Mashroom Dataset</a> will be used, described as:
+												<p class="desc italic">													
+													"This data set includes descriptions of hypothetical samples corresponding to 23 species of gilled mushrooms in the Agaricus and Lepiota Family (pp. 500-525). Each species is identified as definitely edible, definitely poisonous, or of unknown edibility and not recommended. This latter class was combined with the poisonous one."
+												</p><br><br>
+												<a href="./mushroom/agaricus-lepiota.names" class="button alt icon solid fa-question-circle">Names</a>												
+												<a href="./mushroom/agaricus-lepiota-missing.data" class="button icon solid fa-info-circle">Dataset</a>
+											</section>	
+																		
 									</div>
 								</div>
 							</div>
@@ -99,43 +99,24 @@
 							<div class="col-8 col-12-medium">
 								<div id="content">
 
-									<!-- Content -->
-										<article>		
-											<img class="imgC" src="./images/autoDraw.gif">
-										</article>
+									<!-- Content --><footer>
+										<h2 id="">Data Understanding</h2>
+										This Dataset contains 8124 <strong>completely nominal</strong> instances, 4208 (51.8%) classified as <strong>edible</strong> and the rest 3916 (48.2%) as <strong>poisonous</strong>.
+										The rest 22 predictors refer to the characteristics of the mushroom, such as cap, bruises, odor, gill, stalk, veil, ring, spor, population and habitat.<br>										
+										</p><br>
+									</footer>
+										
 								</div>
 
 
 							</div>
 							<div class="col-4 col-12-medium">
 								<div id="sidebar">
-									<footer>
-										<h2 id="AutoDraw">AutoDraw</h2>
-										<p class="desc italic">"AutoDraw is a new kind of drawing tool that pairs the magic of machine learning with drawings from talented artists to help everyone create anything visual, fast."<br>
-										</p><br>
-										<a href="https://www.autodraw.com/" class="button icon solid fa-info-circle">Check it out</a>
-									</footer>
+									<article>		
+											<img class="imgC" src="./images/simpsonDrug.gif">
+										</article>
 									<!-- Sidebar -->	
-										<!--<section>
-											<h3>My Examples</h3>
-											<footer>
-												<a href="#HandsOn" class="button icon solid fa-info-circle">See examples</a>
-											</footer>
-											<br><p><strong>Note: </strong>They are in Spanish.</p>
-										</section>-->
-										<!--
-										<section>
-											<h3>Subheading</h3>
-											<ul class="style2">
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quis eget mi dolore</a></li>
-												<li><a href="#">Quam turpis feugiat sit dolor</a></li>
-												<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quisturpis nisi</a></li>
-											</ul>
-										</section>
-										-->
+										
 								</div>
 							</div>
 						</div>
@@ -149,28 +130,57 @@
 								<div id="sidebar">
 
 									<!-- Sidebar -->
-										<section id="QuickDraw"><br><br>
-											<h2>Quick, Draw!</h2>
-											<p class="desc italic">
-												"This is a game built with machine learning. You draw, and a neural network tries to guess what you’re drawing. Of course, it doesn’t always work. But the more you play with it, the more it will learn. It’s just one example of how you can use machine learning in fun ways."
-											</p>	
-											<a href="https://quickdraw.withgoogle.com/" class="button icon solid fa-info-circle">Take a look</a>
-										</section>
+										<article><img class="imgC" src="./images/meme.jpg">
+										</article>
 
 								</div>
 							</div>
 							<div class="col-8 col-12-medium imp-medium">
 								<div id="content">
-									<!-- Content -->
-										<article>
-											<img class="imgC" src="./images/quickDraw5.gif">
-											<!--<img class="imgC" src="./images/quickDraw6.gif">-->
-										</article>
+									<!-- Content --><section id=""><br>
+											<h2>Data Preparation</h2>
+											<p class="desc">
+												Almost all attributes are biased to the right, so data must be normalized and therefore converted to numerical in order to achieve a higher performant level.
+												For this, "Nominal to Numerical" Rapidminer operator is used, followed by a "Normalize" one. Between them, "Principal Component Analysis" should be integrated to reduce the number of the resulting attributes (116). 
+												But prior all this, "Set Role" operator must be included to specify the label and missing values must be handled by an operator called "Replace Missing Values".
+											</p>	
+										</section>
+										
 								</div>
 							</div>
 						</div>
 					</div>
 					</div>
+					<div id="footer-wrapper"></div>
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-8 col-12-medium">
+								<div id="content">
+
+									<!-- Content --><footer>
+										<h2 id="">Modeling and Evaluation</h2>
+										Different models are builded to be able to choose the best one, based on the posterior evaluation. <a href="./mushroom/kNN.png">k-NN (k=5)</a>, <a href="./mushroom/naiveBayes.png">Naive Bayes</a>, <a href="./mushroom/svm.png">SVM</a>, <a href="./mushroom/linearRegression.png">Linear Regression</a> and <a href="./mushroom/decisionTree.png">Decision Tree</a> were used. 
+										Confusion Matrices are available in algorithm name links. The most performant algorithm appears to be k-NN (k=5).
+										</p><br>
+									</footer>
+										
+								</div>
+
+
+							</div>
+							<div class="col-4 col-12-medium">
+								<div id="sidebar">
+									<article>		
+											<img class="imgC" src="./mushroom/process.png">
+										</article>
+									<!-- Sidebar -->	
+										
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			<!-- Footer -->
 				<div id="footer-wrapper">
 					<footer id="footer" class="container">
@@ -187,6 +197,7 @@
 						</div>
 					</footer>
 				</div>
+				
 				
 			</div>
 
